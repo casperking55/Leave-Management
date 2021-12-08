@@ -7,12 +7,11 @@ using System.Threading.Tasks;
 
 namespace Leave_Management.Data
 {
-    public class LeaveAllocation
+    public class LeaveAllocation:BaseEntity
     {
-        [Key]
-        public int Id { get; set; }
+       
         public int NumberOfDays { get; set; }
-        public DateTime DateCreated { get; set; }
+        
         [ForeignKey("EmployeeId")]
         public Emplyee Emplyee { get; set; }
         public string EmployeeId  { get; set; }
